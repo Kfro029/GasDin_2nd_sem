@@ -1,0 +1,2 @@
+Field_OF_dynamic.C
+EXE = $(FOAM_USER_APPBIN)/Field_OF_dynamic

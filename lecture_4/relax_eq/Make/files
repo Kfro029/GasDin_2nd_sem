@@ -1,0 +1,2 @@
+relax_eq.C
+EXE = $(FOAM_USER_APPBIN)/relax_eq
