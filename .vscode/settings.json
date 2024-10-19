@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "Field_OF.C": "cpp"
+        "Field_OF.C": "cpp",
+        "ddt.C": "cpp",
+        "Time_OF.C": "cpp",
+        "laplacianFoam.C": "cpp"
     }
 }
