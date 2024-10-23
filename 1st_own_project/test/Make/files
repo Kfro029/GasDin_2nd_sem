@@ -1,0 +1,2 @@
+heat.C
+EXE = $(FOAM_USER_APPBIN)/heat
