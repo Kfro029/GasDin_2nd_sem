@@ -26,8 +26,8 @@ boundaryField
         uniformValue    sine;
         uniformValueCoeffs
         {
-            frequency       constant 4;
-            scale           constant 1.5; // 
+            frequency       constant 1;
+            scale           constant 3; // 
             level           constant 3; // средняя температура
         }
         value           $internalField;

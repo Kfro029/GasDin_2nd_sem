@@ -3,6 +3,7 @@
         "Field_OF.C": "cpp",
         "ddt.C": "cpp",
         "Time_OF.C": "cpp",
-        "laplacianFoam.C": "cpp"
+        "laplacianFoam.C": "cpp",
+        "burgers.C": "cpp"
     }
 }

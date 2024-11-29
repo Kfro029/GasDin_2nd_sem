@@ -1,0 +1,24 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions        # Tutorial run functions
+#------------------------------------------------------------------------------
+
+decompDict="-decomposeParDict system/decomposeParDict"
+
+#restore0Dir
+
+#runApplication gmshToFoam model.msh
+
+runApplication $decompDict decomposePar
+
+runParallel burgers
+
+#runApplication burgers
+
+runApplication reconstructParMesh -constant
+
+runApplication reconstructPar
+
+#touch f.foam
+
+#------------------------------------------------------------------------------

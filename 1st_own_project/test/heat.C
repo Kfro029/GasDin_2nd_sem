@@ -113,7 +113,7 @@ volScalarField G
         IOobject::NO_WRITE
     ),
     mesh,
-    dimensionedScalar("G", dimless, 1)
+    dimensionedScalar("G", dimViscosity, 1)
 );
 
 
@@ -121,10 +121,13 @@ volScalarField G
     {
       runTime++;
       Info<< "Time = " << runTime.timeName() << nl << endl;
+      
+      //scalar CFL = max(G * DT / deltaX);
+      //Info<< "CFL = "<< CFL << endl;
 
       fvScalarMatrix TEqn
       (
-	  fvm::ddt(T) ==  G * fvm::laplacian(DT, T) + fvm::Sp(k * T, T)
+	  fvm::ddt(T) -  fvm::laplacian(G, T) == fvm::Sp(k * T, T)
       );
 
       TEqn.solve();
